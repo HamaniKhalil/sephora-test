@@ -12,5 +12,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "Sephora Test"
-include ':app'
+
+include(":app")
+include(":domain")
+include(":core")
