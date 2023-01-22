@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initiated CHANGELOG.md, README.md
 - Initiated domain and core modules
 - Implemented domain layer for products
+- Implemented network layer for products
+- Added dagger hilt as dependency injection manager
 
 ### Changed
 
@@ -19,4 +21,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- 
+- Fixed extra importation in gradle kts in domain module

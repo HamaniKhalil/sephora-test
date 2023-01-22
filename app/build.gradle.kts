@@ -14,10 +14,19 @@ val kotlinVersion: String by rootProject.extra
 // Compose
 val composeVersion: String by rootProject.extra
 
+// DI
+val daggerHiltVersion: String by rootProject.extra
+
+kapt {
+    correctErrorTypes = true
+}
+
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -76,6 +85,12 @@ dependencies {
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
     implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+
+    // DI
+    implementation("com.google.dagger:hilt-android:$daggerHiltVersion")
+    kapt("com.google.dagger:hilt-android-compiler:$daggerHiltVersion")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

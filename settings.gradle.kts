@@ -18,3 +18,4 @@ rootProject.name = "Sephora Test"
 include(":app")
 include(":domain")
 include(":core")
+include(":network")

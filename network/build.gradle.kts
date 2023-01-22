@@ -11,14 +11,22 @@ val materialVersion: String by rootProject.extra
 // Kotlin
 val kotlinVersion: String by rootProject.extra
 
+// DI
+val daggerHiltVersion: String by rootProject.extra
 
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
+}
+
+kapt {
+    correctErrorTypes = true
 }
 
 android {
-    namespace = "com.sephoratest.domain"
+    namespace = "com.sephoratest.network"
     compileSdk = projectCompileSdk
 
     defaultConfig {
@@ -49,9 +57,25 @@ android {
 
 dependencies {
 
+    implementation(project(":core"))
+    implementation(project(":domain"))
+
     implementation("androidx.core:core-ktx:$coreVersion")
     implementation("androidx.appcompat:appcompat:$appcompatVersion")
-    implementation("com.google.android.material:material:1.7.0")
+    implementation("com.google.android.material:material:$materialVersion")
+
+    // DI
+    implementation("com.google.dagger:hilt-android:$daggerHiltVersion")
+    kapt("com.google.dagger:hilt-android-compiler:$daggerHiltVersion")
+
+    // Retrofit
+    val retrofitVersion = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+
+    // Okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
