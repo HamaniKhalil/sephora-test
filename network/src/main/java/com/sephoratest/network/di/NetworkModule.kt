@@ -1,4 +1,4 @@
-package com.sephoratest.di
+package com.sephoratest.network.di
 
 import com.sephoratest.network.BASE_URL
 import com.sephoratest.network.products.repositories.ApiProductRepository

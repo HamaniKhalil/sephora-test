@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Transformed gradle files to kts format
+- Moved DI network module to network layer 
 
 ### Fixed
 
