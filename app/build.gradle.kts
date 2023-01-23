@@ -84,8 +84,8 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":domain"))
     implementation(project(":network"))
+    implementation(project(":ui"))
 
-    implementation("androidx.core:core:$appcompatVersion")
     implementation("androidx.core:core-ktx:$appcompatVersion")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
     implementation("androidx.activity:activity-compose:1.6.1")
@@ -101,6 +101,15 @@ dependencies {
     implementation("com.google.accompanist:accompanist-swiperefresh:0.27.0")
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.5.3")
+    // Coil
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
+    implementation("com.github.skydoves:landscapist-glide:2.1.1")
+    implementation("com.github.skydoves:landscapist-coil:2.1.1")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
+    implementation("com.github.bumptech.glide:okhttp3-integration:4.12.0")
 
     // DI
     implementation("com.google.dagger:hilt-android:$daggerHiltVersion")

@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implemented network layer for products
 - Added dagger hilt as dependency injection manager
 - Plugged all layers together and initiated compose screen
+- Initiated UI module to contain atomic design of the app and created the product list item
 
 ### Changed
 
