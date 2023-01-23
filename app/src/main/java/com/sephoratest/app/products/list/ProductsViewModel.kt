@@ -1,12 +1,12 @@
-package com.sephoratest.app.products
+package com.sephoratest.app.products.list
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sephoratest.network.products.usecases.ApiGetAllProductsUseCase
 import com.sephoratest.app.ui.mappers.UiProductMapper
 import com.sephoratest.app.ui.models.UiProduct
+import com.sephoratest.network.products.usecases.ApiGetAllProductsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

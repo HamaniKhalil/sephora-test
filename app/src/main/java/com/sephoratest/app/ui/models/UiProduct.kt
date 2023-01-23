@@ -1,5 +1,7 @@
 package com.sephoratest.app.ui.models
 
+import java.io.Serializable
+
 data class UiProduct(
     val id: Long,
     val name: String,
@@ -9,4 +11,4 @@ data class UiProduct(
     val brand: UiBrand,
     val isProductSet: Boolean,
     val isSpecialBrand: Boolean
-)
+): Serializable

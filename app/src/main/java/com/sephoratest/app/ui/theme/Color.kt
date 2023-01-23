@@ -8,4 +8,5 @@ val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
 
 
-val SephoraGrey = Color(0xFF404040)
+val SephoraGray = Color(0xFF404040)
+val SephoraLightGray = Color(0xFF767676)

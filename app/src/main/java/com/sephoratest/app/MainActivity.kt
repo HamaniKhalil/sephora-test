@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.sephoratest.app.products.ProductsScreen
+import androidx.navigation.compose.rememberNavController
+import com.sephoratest.app.navigation.products.ProductNavigationGraph
+import com.sephoratest.app.products.list.ProductsScreen
 import com.sephoratest.app.ui.theme.SephoraTestTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +26,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    ProductsScreen()
+                    val navigationController = rememberNavController()
+                    ProductNavigationGraph(
+                        modifier = Modifier,
+                        navigationController = navigationController
+                    )
                 }
             }
         }
