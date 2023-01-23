@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- 
+
+### Changed
+
+-  
+
+### Fixed
+
+- 
+
+## [0.1.0] - 2023-01-23
+
+### Added
+
 - Initiated CHANGELOG.md, README.md
 - Initiated domain and core modules
 - Implemented domain layer for products
