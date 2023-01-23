@@ -20,6 +20,9 @@ val daggerHiltVersion by extra("2.44")
 // Retrofit
 val retrofitVersion by extra("2.9.0")
 
+// Mockk
+val mockkVersion by extra("1.13.3")
+
 plugins {
     id("com.android.application") version "7.3.1" apply false
     id("com.android.library") version "7.3.1" apply false

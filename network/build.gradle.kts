@@ -17,6 +17,9 @@ val daggerHiltVersion: String by rootProject.extra
 // Retrofit
 val retrofitVersion: String by rootProject.extra
 
+// Mockk
+val mockkVersion: String by rootProject.extra
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -49,6 +52,10 @@ android {
             )
         }
     }
+    testOptions {
+        unitTests.isIncludeAndroidResources = true
+        unitTests.isReturnDefaultValues = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -74,9 +81,15 @@ dependencies {
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+    implementation("com.squareup.retrofit2:retrofit-mock:$retrofitVersion")
     // Okhttp
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+
+    testImplementation("androidx.arch.core:core-testing:2.2.0-alpha01")
+
+    testImplementation("io.mockk:mockk:${mockkVersion}")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

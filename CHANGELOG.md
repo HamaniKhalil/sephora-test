@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Plugged all layers together and initiated compose screen
 - Initiated UI module to contain atomic design of the app and created the product list item
 - Implemented a simple detail screen
+- Initiated simple unit tests
 
 ### Changed
 
