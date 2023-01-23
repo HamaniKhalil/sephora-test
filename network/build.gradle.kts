@@ -14,6 +14,9 @@ val kotlinVersion: String by rootProject.extra
 // DI
 val daggerHiltVersion: String by rootProject.extra
 
+// Retrofit
+val retrofitVersion: String by rootProject.extra
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -69,7 +72,6 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:$daggerHiltVersion")
 
     // Retrofit
-    val retrofitVersion = "2.9.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 

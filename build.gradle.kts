@@ -17,6 +17,9 @@ val composeVersion by extra("1.3.3")
 // DI
 val daggerHiltVersion by extra("2.44")
 
+// Retrofit
+val retrofitVersion by extra("2.9.0")
+
 plugins {
     id("com.android.application") version "7.3.1" apply false
     id("com.android.library") version "7.3.1" apply false

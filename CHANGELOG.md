@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implemented domain layer for products
 - Implemented network layer for products
 - Added dagger hilt as dependency injection manager
+- Plugged all layers together and initiated compose screen
 
 ### Changed
 

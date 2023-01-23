@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface ProductsService {
 
-    @GET("/items.json")
+    @GET("items.json")
     fun getAll(): Call<List<ProductDto>>
 }

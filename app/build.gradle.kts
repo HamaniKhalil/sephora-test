@@ -17,6 +17,9 @@ val composeVersion: String by rootProject.extra
 // DI
 val daggerHiltVersion: String by rootProject.extra
 
+// Retrofit
+val retrofitVersion: String by rootProject.extra
+
 kapt {
     correctErrorTypes = true
 }
@@ -78,6 +81,10 @@ android {
 
 dependencies {
 
+    implementation(project(":core"))
+    implementation(project(":domain"))
+    implementation(project(":network"))
+
     implementation("androidx.core:core:$appcompatVersion")
     implementation("androidx.core:core-ktx:$appcompatVersion")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
@@ -85,11 +92,26 @@ dependencies {
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
     implementation("androidx.compose.material:material:1.3.1")
+
+    // Optional - Integration with ViewModels
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+    // Optional - Integration with LiveData
+    implementation("androidx.compose.runtime:runtime-livedata:1.4.0-alpha04")
+    // Swipe refresh
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.27.0")
+    // Navigation
     implementation("androidx.navigation:navigation-compose:2.5.3")
 
     // DI
     implementation("com.google.dagger:hilt-android:$daggerHiltVersion")
     kapt("com.google.dagger:hilt-android-compiler:$daggerHiltVersion")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+    // Okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
